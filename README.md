@@ -8,7 +8,7 @@ I decided to add a little PAZAAAAZZZZ when it comes to designing how this To Do 
 
 ![1](https://github.com/user-attachments/assets/09ee5a0f-1375-4673-befa-a00af29040bf)
 
-A little pop up will show if they wwan to change their task status to 'done'
+A little pop up will show if they want to change their task status to 'done'.
 
 ![2](https://github.com/user-attachments/assets/aecb887d-cdc4-4413-8784-fb3c9a59383f)
 
