@@ -1,29 +1,35 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { Component } from '@angular/core'; 
+import { FormsModule } from '@angular/forms';
+//import { NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [AppComponent],
-    }).compileComponents();
-  });
+@Component({ 
+	selector: 'app-root', 
+	templateUrl: './app.component.html', 
+	styleUrls: ['./app.component.css'],
+	standalone: true,
+	imports: [FormsModule, CommonModule]
+}) 
+export class AppComponent { 
+	public items: string[] = []; 
+	public newTask: string = ''; 
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+	public addToList() { 
+		console.log('Add button clicked'); // Debugging
 
-  it(`should have the 'to-do-app' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('to-do-app');
-  });
+		if (this.newTask.trim() === '') { 
+			console.warn('No task entered'); 
+			return; 
+		} 
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, to-do-app');
-  });
-});
+		this.items.push(this.newTask);
+		console.log('Task added:', this.items); 
+
+		this.newTask = ''; // Clear input field
+	} 
+
+	public deleteTask(index: number) { 
+		this.items = this.items.filter((_, i) => i !== index);
+		console.log('Task deleted:', this.items);
+	} 
+}

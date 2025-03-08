@@ -1,0 +1,146 @@
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+.webpage{
+        background-image: url(../assets/background.png); /* ✅ Use absolute path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Keeps the background in place */
+        min-height: 100vh; /* Ensures full page coverage */
+        width: 100%;
+        display: flex;
+}
+.top-nav{
+    margin: 40px 0 0 0;
+    background-color: whitesmoke;
+    overflow: hidden;
+    width:auto;
+    height: 80px;
+    width: 100%;
+    align-items: center;
+    border: 5px solid #608fb9 ;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    margin-top: 50px; /* Adds space below the navbar */
+    width: 100%;
+}
+
+.title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Quicksand';
+    color: #1d5d92;
+    padding-top: 5px;
+}
+
+.input-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 700px; /* Match input width */
+}
+
+.input-wrapper input{
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    font-size: 20px;
+    border: 5px solid #608fb9;
+    border-radius: 50px;
+    padding-right: 160px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input-wrapper button{
+    position: absolute;
+    right: 10px;
+    height: 55px;
+    width: 140px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #608fb9;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.task-list{
+    margin: 50px 0 0 0;
+    width: 80%;
+    height: 600px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    outline: solid 5px #608fb9;
+}
+
+.task-list ul{
+    width: 100%;
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+
+.task-list ul li {
+    display: flex; /* Aligns buttons and text in a row */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between; /* Even spacing */
+    background-color: #608fb9;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    color: white;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 20px;
+    border-bottom: 2px solid white;
+    border-radius: 30px;
+    width: 98%; /* Ensures it doesn't overflow */
+}
+
+.task-list ul li:hover{
+    background-color: #1d5d92;
+}
+
+.task-done{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #1d5d92;
+    border-radius: 30px;
+    height: 50px;
+    width: 100px;
+    background-color: #beccdc;
+}
+
+.task-info{
+    background-color: transparent;
+    border: none;
+}
+
+.task-list ul li span {
+    padding-left: 20px;
+    flex-grow: 1; /* Ensures the text takes up space */
+    text-align: left; /* Centers text */
+    font-size: 25px;
+    font-weight: 400;
+}
+
+p{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
